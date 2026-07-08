@@ -31,6 +31,8 @@
 
 ## Findings
 
+**Public CVE exploit:** https://github.com/verylazytech/CVE-2024-24919
+
 **Related logs:** 
 
 	LOGFILE: /var/log/access.log
