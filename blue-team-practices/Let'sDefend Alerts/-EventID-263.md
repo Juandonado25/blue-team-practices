@@ -1,4 +1,4 @@
-# EventID 263 - Security Triage Report on LetsDefend
+# EventID 263 - Security Triage Report
 
 ## Summary
 
