@@ -25,7 +25,7 @@
 - **CVE Research:** Research on CVE-2024-24919 via external sources to analyze public exploits and vendor advisories.
 - **Log Analysis:** Correlated with OS logs.
 - **Treat enrichment:** Checked external IP reputation on Virus total .
-- **Containment Actions:** Isolated host via EDR.
+- **Containment Actions:** Isolated host via Endpoint security containment tool provided by LetsDefend.
 
 ---
 
