@@ -23,8 +23,8 @@
 ## Actions Taken
 
 - **CVE Research:** Research on CVE-2024-24919 via external sources to analyze public exploits and vendor advisories.
-- **Log Analysis:** Correlated with firewall logs.
-- **Treat enrichment:** Checked external IP reputaton on Virustotal .
+- **Log Analysis:** Correlated with OS logs.
+- **Treat enrichment:** Checked external IP reputation on Virus total .
 - **Containment Actions:** Isolated host via EDR.
 
 ---
