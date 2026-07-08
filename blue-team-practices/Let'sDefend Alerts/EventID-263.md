@@ -2,21 +2,21 @@
 
 ## Summary
 
-**EventID :** 263
-**Event Time :** Jun, 06, 2024, 03:12 PM
-**Rule :** SOC287 - Arbitrary File Read on Checkpoint Security Gateway [CVE-2024-24919]
-**Level :** Security Analyst
-**Hostname :** CP-Spark-Gateway-01
-**Primary User:** admin
-**Last Login:** Jun, 05, 2024, 09:05 AM
-**Destination IP Address :** 172.16.20.146
-**Source IP Address :** 203.160.68.12
-**HTTP Request Method :** POST
-**Requested URL :** 172.16.20.146/clients/MyCRL
-**Request :** aCSHELL/../../../../../../../../../../etc/shadow
-**User-Agent :** Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
-**Alert Trigger Reason :** Characteristics exploit pattern Detected on Request, indicative exploitation of the CVE-2024-24919.
-**Device Action :** Allowed
+- **EventID :** 263
+- **Event Time :** Jun, 06, 2024, 03:12 PM
+- **Rule :** SOC287 - Arbitrary File Read on Checkpoint Security Gateway [CVE-2024-24919]
+- **Level :** Security Analyst
+- **Hostname :** CP-Spark-Gateway-01
+- **Primary User:** admin
+- **Last Login:** Jun, 05, 2024, 09:05 AM
+- **Destination IP Address :** 172.16.20.146
+- **Source IP Address :** 203.160.68.12
+- **HTTP Request Method :** POST
+- **Requested URL :** 172.16.20.146/clients/MyCRL
+- **Request :** aCSHELL/../../../../../../../../../../etc/shadow
+- **User-Agent :** Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
+- **Alert Trigger Reason :** Characteristics exploit pattern Detected on Request, indicative exploitation of the CVE-2024-24919.
+- **Device Action :** Allowed
 
 ---
 
