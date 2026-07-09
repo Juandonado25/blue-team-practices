@@ -1,4 +1,4 @@
-![](images/letsdefend-logo.png)
+![](../images/letsdefend-logo.png)
 
 # EventID 263 - Security Triage Report
 
