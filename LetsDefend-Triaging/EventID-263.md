@@ -1,6 +1,8 @@
+![letsdefend-logo](images/letsdefend-logo.png)
+
 # EventID 263 - Security Triage Report
 
-## Summary
+## Summaryc
 
 - **EventID :** 263
 - **Event Time :** Jun, 06, 2024, 03:12 PM
@@ -58,10 +60,29 @@
 
 ---
 
+## MITRE ATT&CK Mapping
+
+- **T1190** - Exploit Public-Facing Application.
+- **T1003** - OS Credential Dumping.
+
+---
+
 ## Decision & Justification
 
-**Final Status:** Escalated
+**Final Status:** ESCALATED
 
 **Justification:**  The alert has been validated as a True Positive. Network logs confirm deliberate exploitation attempts targeting CVE-2024-24919 against the Check Point Security Gateway (`172.16.20.146`) from external IPs `203.160.68.12` and `203.160.68.13`. The primary attack vector included a well-known path traversal payload (`aCSHELL/../../etc/passwd`) targeting `/clients/MyCRL`.
 
 Although the second attempt for `/etc/shadow` was successfully blocked (HTTP 403), the initial request returned an HTTP 200 status code with a significant payload size (1256 bytes). Due to the high probability of data exfiltration of local system files, immediate escalation and incident response protocols are required.
+
+---
+
+## Recommendation
+
+**Apply Vendor Patches**: Install the official manufacturer hotfix (Check Point) for the affected Gaia OS version immediately.
+
+---
+
+## Lessons Learned
+
+**Prioritized Patch Management:** Classify vulnerabilities affecting edge assets and critical infrastructure as Tier 1 threats. Establish an accelerated patching window (e.g., within 24–48 hours of disclosure) to mitigate exposure before active exploitation begins.
