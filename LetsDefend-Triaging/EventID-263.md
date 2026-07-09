@@ -2,7 +2,7 @@
 
 # EventID 263 - Security Triage Report
 
-## Summaryc
+## Summary
 
 - **EventID :** 263
 - **Event Time :** Jun, 06, 2024, 03:12 PM
