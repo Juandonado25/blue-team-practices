@@ -21,16 +21,12 @@
 - **Alert Trigger Reason :** Characteristics exploit pattern Detected on Request, indicative exploitation of the CVE-2024-24919.
 - **Device Action :** Allowed
 
----
-
 ## Actions Taken
 
 - **CVE Research:** Research on CVE-2024-24919 via external sources to analyze public exploits and vendor advisories.
 - **Log Analysis:** Correlated with OS logs.
 - **Threat enrichment:** Checked external IP reputation on Virus total .
 - **Containment Actions:** Isolated host via Endpoint security containment tool provided by LetsDefend.
-
----
 
 ## Findings
 
@@ -56,14 +52,10 @@
 
 **External IP Reputation:** 6/91 security vendors flagged this IP address as malicious - https://www.virustotal.com/gui/ip-address/203.160.68.12
 
----
-
 ## MITRE ATT&CK Mapping
 
 - **T1190** - Exploit Public-Facing Application.
 - **T1003** - OS Credential Dumping.
-
----
 
 ## Decision & Justification
 
@@ -73,13 +65,9 @@
 
 Although the second attempt for `/etc/shadow` was successfully blocked (HTTP 403), the initial request returned an HTTP 200 status code with a significant payload size (1256 bytes). Due to the high probability of data exfiltration of local system files, immediate escalation and incident response protocols are required.
 
----
-
 ## Recommendation
 
 **Apply Vendor Patches**: Install the official manufacturer hotfix (Check Point) for the affected Gaia OS version immediately.
-
----
 
 ## Lessons Learned
 

@@ -17,16 +17,12 @@
 - **Trigger Reason :** Suspicious Powershell Script Executed
 - **AV/EDR Action :** Detected
 
----
-
 # Actions Taken
 
 - **Summary analysis:** Understanding the initial incident summary to decide where to start the research.
 - **Log Analysis:** Analyze the endpoint's logs in order to find some IOCs that help me to take a proper decision.
 - **Threat enrichment:** Checked external URL reputation on Virus Total.
 - **Containment Actions:** Isolated host via Endpoint security containment tool provided by LetsDefend.
-
----
 
 # Findings
 
@@ -64,15 +60,11 @@
 	- db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 - 35/62 security vendors flagged this file as malicious. Identified by the community as a trojan.
 - **Possible C2 IP:** 91.236.116.163 - Comunniy score -9. Community member says "One or more malicious processes communicated with this IP address during (Crowdstrike) sandboxing of a malicious link that spawned many processes. Operations associated with IP included GET, POST and Keep Alive."
 
----
-
 # MITTRE ATT&CK Mapping
 
 - **T1566** - User's browsing history shows a direct download od payload_1.ps1 from an external cloud service.
 - **T1059.001** - Sysmon Event ID 1 confirms `powershell.exe` was used to execute `payload_1.ps1` with the `-Command` parameter.
 - **T1071.001** - The payload established an unencrypted HTTP/1.1 connection (`GET /INDEX.PHP?...`) to the suspicious external IP `91.236.116.163`.
-
----
 
 # Decision & Justification
 
