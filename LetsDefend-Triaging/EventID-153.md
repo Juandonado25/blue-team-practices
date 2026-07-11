@@ -39,7 +39,7 @@
 
 	Timestamp: 14/Mar/2024:17:23:46+0000
 	Request: GET
-	URL: HTTP://91.236.116.163/INDEX.PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6
+	URL: hxxp[://]91[.]236[.]116[.]163/INDEX[.]PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6
 	Protocol: HTTP/1.1
 	Status Code: 200
 	Response Size: 865
@@ -57,7 +57,7 @@
 	-  hxxps[://]files-ld[.]s3[.]us-east-2[.]amazonaws[.]com/payload_1[.]ps1 - 10/92 security vendors flagged this URL as malicious. This DOMAIN is used by SILENTBUILDER. SilentBuilder is a dropper and downloader used by a subgroup of Conti. The MSI file downloaded appears to be a Notepad++ installer. - https://www.virustotal.com/gui/url/3251c28eed92f819da76225505657f4c0fbf8c0e900423a9e4c9cb2fbb06804d
 	- hxxps[://]kionagranada[.]com/upload/sd2[.]ps1 - 10/92 security vendors flagged this URL as malicious. This DOMAIN is used by KOI-STEALER. https://www.virustotal.com/gui/url/13296cb6ee6be417008a16c76fc9ad2420a4fb41554a9c1bb7fc136f589887d8
 	- kionagranada.com - 1/91 security vendor flagged this domain as malicious. This DOMAIN is used by KOI-STEALER. https://www.virustotal.com/gui/domain/kionagranada.com
-	- db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 - 35/62 security vendors flagged this file as malicious. Identified by the community as a trojan.
+	- db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 - 35/62 security vendors flagged this file as malicious. Identified by the community as a trojan. - https://www.virustotal.com/gui/file/db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0
 - **Possible C2 IP:** 91.236.116.163 - Comunniy score -9. Community member says "One or more malicious processes communicated with this IP address during (Crowdstrike) sandboxing of a malicious link that spawned many processes. Operations associated with IP included GET, POST and Keep Alive."
 
 # MITTRE ATT&CK Mapping
