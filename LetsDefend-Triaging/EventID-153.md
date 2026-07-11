@@ -28,30 +28,30 @@
 
 - **Related Browsing History**: 2024-03-14 17:22:25 hxxps[://]files-ld[.]s3[.]us-east-2[.]amazonaws[.]com/payload_1[.]ps1
 - **Related Logs:**
-	- Source: Sysmon
-	- Username: Tony
-	- EventID: 22
-	- Type: DNS Query
-	- QueryResult: 161.22.46.148;
-	- QueryName: kionagranada.com
-	- Process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-	- UtcTime: 2024-03-14 17:23:46
+	Source: Sysmon
+	Username: Tony
+	EventID: 22
+	Type: DNS Query
+	QueryResult: 161.22.46.148;
+	QueryName: kionagranada.com
+	Process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+	UtcTime: 2024-03-14 17:23:46
 
-	- Timestamp: 14/Mar/2024:17:23:46+0000
-	- Request: GET
-	- URL: hxxp[://]91[.]236[.]116[.]163/INDEX[.]PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6
-	- Protocol: HTTP/1.1
-	- Status Code: 200
-	- Response Size: 865
+	Timestamp: 14/Mar/2024:17:23:46+0000
+	Request: GET
+	URL: hxxp[://]91[.]236[.]116[.]163/INDEX[.]PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6
+	Protocol: HTTP/1.1
+	Status Code: 200
+	Response Size: 865
 
-	- Username: LetsDefend
-	- EventID: 1(Process Create)
-	- Image: C:\Windows\System32\WINDOWSPOWERSHELL\V1.0\powershell.exe
-	- CommandLine: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1\payload_1.ps1'"
-	- OriginalFileName: payload_1.ps1
-	- Current Directory: C:\Users\LetsDefend\Downloads\
-	- Hash: db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0
-	- PID: 4315
+	Username: LetsDefend
+	EventID: 1(Process Create)
+	Image: C:\Windows\System32\WINDOWSPOWERSHELL\V1.0\powershell.exe
+	CommandLine: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1\payload_1.ps1'"
+	OriginalFileName: payload_1.ps1
+	Current Directory: C:\Users\LetsDefend\Downloads\
+	Hash: db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0
+	PID: 4315
 
 - **External URL reputation:** 
 	-  hxxps[://]files-ld[.]s3[.]us-east-2[.]amazonaws[.]com/payload_1[.]ps1 - 10/92 security vendors flagged this URL as malicious. This DOMAIN is used by SILENTBUILDER. SilentBuilder is a dropper and downloader used by a subgroup of Conti. The MSI file downloaded appears to be a Notepad++ installer. - https://www.virustotal.com/gui/url/3251c28eed92f819da76225505657f4c0fbf8c0e900423a9e4c9cb2fbb06804d
