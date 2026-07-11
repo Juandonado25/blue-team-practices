@@ -25,3 +25,9 @@ Cada ejercicio o alerta analizada en este repositorio está documentada bajo la 
 * Monitoreo de procesos y detección de técnicas de evasión de defensas.
 * Análisis de red, peticiones DNS y tráfico HTTP/HTTPS hacia servidores C2.
 * Aplicación de metodologías de contención inmediata en endpoints comprometidos.
+
+## Reportes
+
+- [EventID-153](/LetsDefend-Triaging/EventID-153.md)
+- [EventID-263](/LetsDefend-Triaging/EventID-263.md)
+
