@@ -1,50 +1,27 @@
 # Blue Team Practices
 
-Repositorio de practicas y writeups orientados a la defensa en ciberseguridad, desarrollados a partir de ejercicios reales en plataformas especializadas como Let's Defend, Hack The Box, entre otras.
+Este repositorio centraliza el trabajo práctico realizado en el área de Blue Team, enfocado por el momento en la plataforma Let's Defend. Aquí se documentan las tareas de monitoreo, detección, análisis forense, respuesta a incidentes y gestión de alertas dentro de un entorno que simula un SOC (Security Operations Center) real.
 
----
+El objetivo es registrar el proceso de aprendizaje, estructurar metodologías de investigación y construir una base de referencia técnica aplicable a la seguridad informática profesional.
 
-## Descripción
+## Plataforma Utilizada
 
-Este repositorio centraliza el trabajo practico realizado en el area de Blue Team, abarcando tareas de monitoreo, detección, análisis forense, respuesta a incidentes y ingestion de alertas. El objetivo es documentar el proceso de aprendizaje y construir una base de referencia tecnica aplicable a entornos reales de seguridad informática.
+* **Let's Defend:** Simulación de operaciones de SOC (L1/L2), análisis y triage de alertas, investigación de endpoints y contención de amenazas.
 
----
+## Estructura de la Documentación
 
-## Plataformas utilizadas
+Cada ejercicio o alerta analizada en este repositorio está documentada bajo la siguiente estructura:
 
-- **Let's Defend** — Simulacion de operaciones en un SOC (Security Operations Center), analisis de alertas y respuesta a incidentes.
-- **Hack The Box** — Laboratorios de seguridad ofensiva y defensiva en entornos controlados.
-- Otras plataformas de practica en ciberseguridad.
+* **Descripción del Escenario:** Resumen del incidente original, nivel de criticidad y datos iniciales del host afectado (IP, hostname, usuario).
+* **Metodología de Investigación:** Pasos cronológicos seguidos en el análisis (análisis de logs, monitoreo de procesos, conexiones de red).
+* **Enriquecimiento de Amenazas (Threat Intelligence):** Análisis de reputación de artefactos (hashes, IPs, dominios) utilizando fuentes externas.
+* **Acciones de Contención:** Medidas tomadas para mitigar el impacto, como el aislamiento de hosts o el bloqueo de indicadores de compromiso (IOCs).
+* **Mapeo MITRE ATT&CK:** Identificación de las tácticas y técnicas utilizadas por el adversario.
+* **Conclusión y Justificación:** Determinación final de la alerta (True Positive / False Positive) junto con la justificación del escalado.
 
----
+## Áreas Temáticas Abordadas
 
-## Contenido
-
-El repositorio esta organizado por plataforma y tipo de ejercicio. Cada entrada incluye:
-
-- Descripción del escenario o alerta analizada.
-- Metodología y pasos seguidos durante la investigación.
-- Herramientas utilizadas.
-- Conclusiones y lecciones aprendidas.
-
----
-
-## Areas tematicas
-
-- Analisis de logs y eventos de seguridad.
-- Investigacion de alertas en sistemas SIEM.
-- Analisis de malware y artefactos maliciosos.
-- Respuesta a incidentes y contencion de amenazas.
-- Analisis forense digital.
-- Deteccion de tecnicas MITRE ATT&CK.
-
----
-
-## Herramientas frecuentes
-
-- Wireshark
-- Splunk / Elastic Stack
-- VirusTotal
-- CyberChef
-- Any.run
-- Sysinternals Suite
+* Análisis de logs y eventos de sistema (Windows Security Logs, Sysmon).
+* Monitoreo de procesos y detección de técnicas de evasión de defensas.
+* Análisis de red, peticiones DNS y tráfico HTTP/HTTPS hacia servidores C2.
+* Aplicación de metodologías de contención inmediata en endpoints comprometidos.
