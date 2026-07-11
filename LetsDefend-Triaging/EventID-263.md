@@ -1,6 +1,6 @@
 ![](../images/letsdefend-logo.png)
 
-# EventID 263 - Security Triage Report
+# EventID 263 - Security Triage Report By Juandonado25
 
 ## Summary
 
@@ -27,7 +27,7 @@
 
 - **CVE Research:** Research on CVE-2024-24919 via external sources to analyze public exploits and vendor advisories.
 - **Log Analysis:** Correlated with OS logs.
-- **Treat enrichment:** Checked external IP reputation on Virus total .
+- **Threat enrichment:** Checked external IP reputation on Virus total .
 - **Containment Actions:** Isolated host via Endpoint security containment tool provided by LetsDefend.
 
 ---
@@ -51,8 +51,6 @@
 	172.16.20.50: - - [06/Jun/2024:15:13:45 +0000] "GET / HTTP/1.1" 200 678 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0"
 	
 	203.160.68.13 : - - [06/Jun/2024:15:14:02 +0000] "POST /clients/MyCRL HTTP/1.1" 403 314 "aCSHELL/../../../../../../../../../../etc/shadow" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
-	
-	10.0.0.10 : - - [06/Jun/2024:15:14:30 +0000] "GET /index.html HTTP/1.1" 200 854 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
 	
 	203.160.68.12 : - - [06/Jun/2024:15:15:01 +0000] "POST / HTTP/1.1" 200 512 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0"
 

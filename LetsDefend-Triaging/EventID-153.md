@@ -1,0 +1,83 @@
+![](../images/letsdefend-logo.png)
+
+# EventID 153 - Security Triage Report By Juandonado25
+
+## Summary
+
+- **EventID :** 238
+- **Event Time :** Mar, 14, 2024, 05:23 PM
+- **Rule :** SOC153 - Suspicious Powershell Script Executed
+- **Level :** Security Analyst
+- **Hostname :** Tony
+- **Ip Address :** 172.16.17.206
+- **File Name :** payload_1.ps1
+- **File Path :** C:\Users\LetsDefend\Downloads\payload_1.ps1
+- **File Hash :** db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0
+- **CommandLine:** "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1\payload_1.ps1'"
+- **Trigger Reason :** Suspicious Powershell Script Executed
+- **AV/EDR Action :** Detected
+
+---
+
+# Actions Taken
+
+- **Summary analysis:** Understanding the initial incident summary to decide where to start the research.
+- **Log Analysis:** Analyze the endpoint's logs in order to find some IOCs that help me to take a proper decision.
+- **Threat enrichment:** Checked external URL reputation on Virus Total.
+- **Containment Actions:** Isolated host via Endpoint security containment tool provided by LetsDefend.
+
+---
+
+# Findings
+
+- **Related Browsing History**: 2024-03-14 17:22:25 hxxps[://]files-ld[.]s3[.]us-east-2[.]amazonaws[.]com/payload_1[.]ps1
+- **Related Logs:**
+	Source: Sysmon
+	Username: Tony
+	EventID: 22
+	Type: DNS Query
+	QueryResult: 161.22.46.148;
+	QueryName: kionagranada.com
+	Process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+	UtcTime: 2024-03-14 17:23:46
+
+	Timestamp: 14/Mar/2024:17:23:46+0000
+	Request: GET
+	URL: HTTP://91.236.116.163/INDEX.PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6
+	Protocol: HTTP/1.1
+	Status Code: 200
+	Response Size: 865
+
+	Username: LetsDefend
+	EventID: 1(Process Create)
+	Image: C:\Windows\System32\WINDOWSPOWERSHELL\V1.0\powershell.exe
+	CommandLine: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1\payload_1.ps1'"
+	OriginalFileName: payload_1.ps1
+	Current Directory: C:\Users\LetsDefend\Downloads\
+	Hash: db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0
+	PID: 4315
+
+- **External URL reputation:** 
+	-  hxxps[://]files-ld[.]s3[.]us-east-2[.]amazonaws[.]com/payload_1[.]ps1 - 10/92 security vendors flagged this URL as malicious. This DOMAIN is used by SILENTBUILDER. SilentBuilder is a dropper and downloader used by a subgroup of Conti. The MSI file downloaded appears to be a Notepad++ installer. - https://www.virustotal.com/gui/url/3251c28eed92f819da76225505657f4c0fbf8c0e900423a9e4c9cb2fbb06804d
+	- hxxps[://]kionagranada[.]com/upload/sd2[.]ps1 - 10/92 security vendors flagged this URL as malicious. This DOMAIN is used by KOI-STEALER. https://www.virustotal.com/gui/url/13296cb6ee6be417008a16c76fc9ad2420a4fb41554a9c1bb7fc136f589887d8
+	- kionagranada.com - 1/91 security vendor flagged this domain as malicious. This DOMAIN is used by KOI-STEALER. https://www.virustotal.com/gui/domain/kionagranada.com
+	- db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0 - 35/62 security vendors flagged this file as malicious. Identified by the community as a trojan.
+- **Possible C2 IP:** 91.236.116.163 - Comunniy score -9. Community member says "One or more malicious processes communicated with this IP address during (Crowdstrike) sandboxing of a malicious link that spawned many processes. Operations associated with IP included GET, POST and Keep Alive."
+
+---
+
+# MITTRE ATT&CK Mapping
+
+- **T1566** - User's browsing history shows a direct download od payload_1.ps1 from an external cloud service.
+- **T1059.001** - Sysmon Event ID 1 confirms `powershell.exe` was used to execute `payload_1.ps1` with the `-Command` parameter.
+- **T1071.001** - The payload established an unencrypted HTTP/1.1 connection (`GET /INDEX.PHP?...`) to the suspicious external IP `91.236.116.163`.
+
+---
+
+# Decision & Justification
+
+**Final Status:** ESCALATED
+
+**Justification:** The alert has been validated as a True Positive. Network and system logs confirm download and exploitation of a malicious payload that possible belong to a Trojan malware. besides the after execution the malicious file try to communicate to a C2 server. 
+
+Requires further investigation.
