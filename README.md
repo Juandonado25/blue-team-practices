@@ -28,6 +28,6 @@ Cada ejercicio o alerta analizada en este repositorio está documentada bajo la 
 
 ## Reportes
 
-- [EventID-153](/LetsDefend-Triaging/EventID-153.md)
-- [EventID-263](/LetsDefend-Triaging/EventID-263.md)
+- [SOC153](SOC153.md)
+- [SOC287](SOC287.md)
 
