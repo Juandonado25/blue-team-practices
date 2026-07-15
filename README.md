@@ -28,6 +28,8 @@ Cada ejercicio o alerta analizada en este repositorio está documentada bajo la 
 
 ## Reportes
 
-- [SOC153](SOC153.md)
-- [SOC287](SOC287.md)
+- [SOC153](LetsDefend-Triaging/SOC153.md)
+- [SOC287](LetsDefend-Triaging/SOC287.md)
+- [SOC342](LetsDefend-Triaging/SOC342.md)
+- [SOC165](LetsDefend-Triaging/SOC165.md)
 
